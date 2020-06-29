@@ -11,15 +11,15 @@ class Home extends Component {
     render() {
         return (
             <Route>
-                <nav class="navbar navbar-light bg-light justify-content-between">
+                <nav className="navbar navbar-light bg-light justify-content-between">
                 <Link to='Products'>Products</Link>
                 <Link to="Shoes">Shoes</Link>
                 <Link to="Cloths">Cloths</Link>
-                <Link to="Cart">Cart</Link>
+                <Link to="cart">Cart</Link>
 
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <form className="form-inline">
+                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </nav>
             </Route>

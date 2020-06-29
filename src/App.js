@@ -9,6 +9,18 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Cart from './components/Cart';
+
+import allReducers from './reducers'
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
+
+
+// const store = createStore(allReducers);
+
+
+
+
 
 function App() {
   return (
@@ -16,6 +28,7 @@ function App() {
     <div className="App">
     <Route path='/' exact component={Home}/>
     <Route path='/Products' exact component={Products}/>
+    <Route path='/cart' exact component={Cart}/>
 
     {/* <Home /> */}
     {/* <Products /> */}
