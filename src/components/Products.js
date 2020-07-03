@@ -26,7 +26,7 @@ class Products extends Component {
     }
 
     buy() {
-        alert('Confirm Buying')
+        alert('would you like to make a payment')
     }
 
 

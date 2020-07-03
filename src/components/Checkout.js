@@ -37,13 +37,13 @@ export class Checkout extends Component {
         </div>
         <div className="col-50">
             <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
+            {/* <label for="fname">Accepted Cards</label>
             <div className="icon-container">
               <i className="fa fa-cc-visa" ></i>
               <i className="fa fa-cc-amex" ></i>
               <i className="fa fa-cc-mastercard" ></i>
               <i className="fa fa-cc-discover" ></i>
-            </div>
+            </div> */}
 
             <label for="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" placeholder="" />
