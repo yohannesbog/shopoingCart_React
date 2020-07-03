@@ -4,35 +4,22 @@ import React, { Component } from 'react'
 import {
     Link
 } from "react-router-dom";
-import {bindActionCreators} from 'redux'
-import {removeFromCart} from '../actions/removeFromCart';
-import {cartItemQty} from '../actions/cartItemQty';
+import Home from './Home';
 
 
-
-class Cart extends Component {
-    // constructor(props) {
-    //     super(props)
-    
-    //     this.state = {
-    //          message: ''
-    //     }
-    //     this.setState({
-    //         message: 
-    //     })
-    // }
+class ProductDetail extends Component {
     
     render() {
         return (
             <div>
-                <h1>Your selected Items</h1>
+               <Home />
                 <Link to='Products'>Back To Products</Link>
 
                 <ul className="card-deck">
                     {
-                        this.props.cart.map((product, index) =>
+                        this.props.cart.map((product) =>
 
-                            <li key={index}>
+                            <li key={product.id}>
                                 <div className='card'>
                                     <img className="card-img-top" id='image' src={product.picture} />
 
@@ -57,9 +44,8 @@ class Cart extends Component {
                                             <option value="10">Ten</option>
                                         </select>
                                     </div>
-                                    <span>{product.count}</span>
-                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.cartItemQty(product.id)} value="">inc qyt</button>
-                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.removeFromCart(product)}>Remove from Cart</button>
+                                    {/* <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Buy Now</button>
+                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.removeFromCart(product)}>Remove from Cart</button> */}
 
                                 </div>
                             </li>
@@ -75,18 +61,13 @@ class Cart extends Component {
 
 function mapStateToProps(state) {
     return {
-        cart: state.selectedProduct.cart
-    };
-
+        cart: state.selectedProduct.cart,
+    }
 }
 
-// const matchDispatchToProps = {
-//     removeFromCart,
-//      cartItemQty
+// function matchDispatchToProps(dispatch) {
+//    return bindActionCreators({removeFromCart: removeFromCart}, dispatch)
 // }
-function matchDispatchToProps(dispatch) {
-   return bindActionCreators({removeFromCart, cartItemQty},dispatch)
-}
 
 
-export default connect( mapStateToProps,matchDispatchToProps)(Cart)
+export default connect( mapStateToProps)(ProductDetail)

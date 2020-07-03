@@ -7,7 +7,8 @@ export default function() {
         price: 5,
         qut: 10,
         id: 1,
-        description: 'test'
+        description: 'test',
+        count: 1
 
     },
     {
@@ -17,7 +18,9 @@ export default function() {
         price: 43,
         qut: 10,
         id: 2,
-        description: 'test'
+        description: 'test',
+        count: 1
+
     },
     {
         picture: './Images/shirt1.jpg',
@@ -26,7 +29,9 @@ export default function() {
         price: 17,
         qut: 10,
         id: 3,       
-         description: 'test'
+         description: 'test',
+         count: 1
+
 
     },
     {
@@ -36,7 +41,9 @@ export default function() {
         price: 9,
         qut: 4,
         id: 4,
-        description: 'test'
+        description: 'test',
+        count: 1
+
 
     },
     {
@@ -46,7 +53,9 @@ export default function() {
         price: 10,
         qut: 10,
         id: 5,
-        description: 'test'
+        description: 'test',
+        count: 1
+
 
     },
     {
@@ -56,7 +65,10 @@ export default function() {
         price: 8,
         qut: 10,
         id: 6,
-        description: 'test'
+        description: 'test',
+        count: 1
+
+
 
     }
 ]

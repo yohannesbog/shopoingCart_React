@@ -1,5 +1,5 @@
 export const removeFromCart = (product) => {
-    console.log(product.id)
+    console.log(product)
 return {
      type: "REMOVE_SELECTED",
      payload: product

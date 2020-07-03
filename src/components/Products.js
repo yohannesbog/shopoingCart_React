@@ -7,23 +7,27 @@ import {
     Link
 } from "react-router-dom";
 import {addToCart} from '../actions/addTocart';
+import {cartItemQty} from '../actions/cartItemQty';
+
 
 
 
 class Products extends Component {
+   
     render() {
         return (
             <div  >
                 <Home />
 
                 <ul className="card-deck">
+
                     {
                         this.props.products.map(product =>
                             <li key={product.id}>
                                 <div className='card'>
-                                    <Link to= {'/products/' + product.id}><img className="card-img-top" id='image' src={product.picture} /></Link>
+                                    <Link to= {'/product/detail'}><img className="card-img-top" id='image' src={product.picture}/></Link>
                                     <div className='card-bod'>
-                                   <Link to= {'/products/' + product.id}><h5 className="card-title">{product.brand}</h5> </Link> 
+                                   <Link to= {'/product/detail'}><h5 className="card-title" onClick={ () =>this.props.productDetail(product)}>{product.brand} </h5> </Link> 
                                     <p className="card-text">{product.type}</p>
                                     <p className="card-text">${product.price}</p>
                                     </div>
@@ -47,7 +51,8 @@ function mapStateToProps(state){
       }
 }
 function matchDispatchToProps(dispatch) {
-     return bindActionCreators({addToCart: addToCart}, dispatch)
+     return bindActionCreators({addToCart: addToCart}, dispatch);
+
 }
 
 
