@@ -7,26 +7,16 @@ import {
 import {bindActionCreators} from 'redux'
 import {removeFromCart} from '../actions/removeFromCart';
 import {cartItemQty} from '../actions/cartItemQty';
-
+import {subQuantity} from  '../actions/SubQuantity'
+import './Cart.css'
 
 
 class Cart extends Component {
-    // constructor(props) {
-    //     super(props)
-    
-    //     this.state = {
-    //          message: ''
-    //     }
-    //     this.setState({
-    //         message: 
-    //     })
-    // }
-    
-    render() {
+ render() {
         return (
             <div>
-                <h1>Your selected Items</h1>
-                <Link to='Products'>Back To Products</Link>
+                <h1 id='header'>Your selected Items</h1>
+                <Link to='products' id='back'> Back To Products</Link>
 
                 <ul className="card-deck">
                     {
@@ -42,23 +32,13 @@ class Cart extends Component {
                                         <p className="card-text">Description:{product.description}</p>
 
                                     </div>
-                                    <div>
-                                        <select id="dropdown">
-                                            <option value="">Select Quantity</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                            <option value="4">Four</option>
-                                            <option value="5">Five</option>
-                                            <option value="6">Six</option>
-                                            <option value="7">Seven</option>
-                                            <option value="8">Eight</option>
-                                            <option value="9">Nine</option>
-                                            <option value="10">Ten</option>
-                                        </select>
-                                    </div>
+                
                                     <span>{product.count}</span>
-                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.cartItemQty(product.id)} value="">inc qyt</button>
+                                   <div>
+
+                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.cartItemQty(product.id)} value="">increase qty</button>
+                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.subQuantity(product.id)} value="">decrease qty</button>
+                                    </div>
                                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.removeFromCart(product)}>Remove from Cart</button>
 
                                 </div>
@@ -85,7 +65,7 @@ function mapStateToProps(state) {
 //      cartItemQty
 // }
 function matchDispatchToProps(dispatch) {
-   return bindActionCreators({removeFromCart, cartItemQty},dispatch)
+   return bindActionCreators({removeFromCart, cartItemQty, subQuantity},dispatch)
 }
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
-import Cloths from './components/Cloths';
+import Contact from './components/Contact';
 
 import Products from './components/Products';
 import {
@@ -12,11 +12,7 @@ import {
   Link
 } from "react-router-dom";
 import Cart from './components/Cart';
-
-import allReducers from './reducers'
-import { createStore } from 'redux';
-import { Provider } from 'react-redux'
-import ProductDetail from './components/ProductDetail';
+import Checkout from './components/Checkout';
 
 
 // const store = createStore(allReducers);
@@ -30,14 +26,11 @@ function App() {
     <Router >
     <div className="App">
     <Route path='/' exact component={Home}/>
-    <Route path='/cloths' exact component={Cloths}/>
-
+    <Route path='/contact' exact component={Contact}/>
     <Route path='/products' exact component={Products}/>
     <Route path='/cart' exact component={Cart}/>
-    <Route path='/product/detail' exact component={ProductDetail}/>
+    <Route path='/product/checkout' exact component={Checkout}/>
 
-    {/* <Home /> */}
-    {/* <Products /> */}
     </div>
     </Router>
   );

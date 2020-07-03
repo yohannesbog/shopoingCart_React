@@ -7,7 +7,7 @@ import {
 import Home from './Home';
 
 
-class ProductDetail extends Component {
+class Checkout extends Component {
     
     render() {
         return (
@@ -70,4 +70,4 @@ function mapStateToProps(state) {
 // }
 
 
-export default connect( mapStateToProps)(ProductDetail)
+export default connect( mapStateToProps)(Checkout)
