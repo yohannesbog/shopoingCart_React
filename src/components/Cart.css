@@ -13,20 +13,19 @@ ul{
 }
 
 .buttons {
-    display: flex;
+    display: inline-flex;
     width: 250px;
     margin: 0 auto;
 }
-#checkout{
-    background-color: green;
+/* #checkout{
+    background-color: rgb(111, 235, 111);
 }
-#remove{
-    background-color: rgb(129, 40, 40);
-}
+/* #remove{
+    background-color: rgb(162, 116, 116);
+} *
 /* #inc{
     background-color:blue;
 }
 #dec{
     background-color:bisque;
 } */
-   

@@ -9,6 +9,7 @@ import {
 import {addToCart} from '../actions/addTocart';
 import Footer from './Footer'
 import { FaCartPlus, FaDollarSign} from 'react-icons/fa'
+import NavBar from './NavBar'
 
 
 
@@ -33,7 +34,7 @@ class Products extends Component {
     render() {
         return (
             <div  >
-                <Home />
+                <NavBar />
                 <ul className="card-deck">
 
                     {
