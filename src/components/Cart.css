@@ -1,6 +1,7 @@
 #back {
     color: green;
     background-color: blanchedalmond;
+    margin: 30px;
 }
 
 #header {
@@ -10,3 +11,22 @@
 ul{
     list-style-type: none;
 }
+
+.buttons {
+    display: flex;
+    width: 250px;
+    margin: 0 auto;
+}
+#checkout{
+    background-color: green;
+}
+#remove{
+    background-color: rgb(129, 40, 40);
+}
+/* #inc{
+    background-color:blue;
+}
+#dec{
+    background-color:bisque;
+} */
+   

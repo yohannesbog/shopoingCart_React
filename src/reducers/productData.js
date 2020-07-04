@@ -22,6 +22,7 @@ export default function() {
         count: 1
 
     },
+    
     {
         picture: './Images/javascriptbook.jpg',
         brand: 'Book',

@@ -1,9 +1,35 @@
 import React, { Component } from 'react'
 import './pagecolor.css'
-export class Checkout extends Component {
+import {
+  Link
+} from "react-router-dom";
+import { FaChevronCircleLeft } from 'react-icons/fa'
 
-    render() {
-       return (
+
+
+export class Checkout extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      data: 
+      <div className="loader"></div>
+
+    }
+    
+  }
+
+  componentDidMount(){
+    this.getData();
+  }
+
+  getData(){
+    setTimeout(() => {
+      this.setState({
+        data: 
+        <div>
+        <Link to='/cart' id='back'> 
+        <FaChevronCircleLeft color='black' size={22} />
+        Back To Cart</Link>
         <div className="row">
         <div className="col-75">
           <div className="container">
@@ -37,14 +63,6 @@ export class Checkout extends Component {
         </div>
         <div className="col-50">
             <h3>Payment</h3>
-            {/* <label for="fname">Accepted Cards</label>
-            <div className="icon-container">
-              <i className="fa fa-cc-visa" ></i>
-              <i className="fa fa-cc-amex" ></i>
-              <i className="fa fa-cc-mastercard" ></i>
-              <i className="fa fa-cc-discover" ></i>
-            </div> */}
-
             <label for="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" placeholder="" />
             <label for="ccnum">Credit card number</label>
@@ -76,7 +94,16 @@ export class Checkout extends Component {
         </div>
 
         </div>
+</div>
+      })
+    }, 2000)
+  }
+    render() {
+       return (
+         <div>
+                {this.state.data}
 
+        </div>
     
        )
     }

@@ -9,6 +9,8 @@ import {removeFromCart} from '../actions/removeFromCart';
 import {cartItemQty} from '../actions/cartItemQty';
 import {subQuantity} from  '../actions/SubQuantity'
 import './Cart.css'
+import { FaCheckCircle, FaArrowDown, FaTrashAlt, FaArrowUp, FaChevronCircleLeft } from 'react-icons/fa'
+
 
 
 class Cart extends Component {
@@ -16,8 +18,9 @@ class Cart extends Component {
         return (
             <div>
                 <h1 id='header'>Your selected Items</h1>
-                <Link to='products' id='back'> Back To Products</Link>
-
+                <Link to='products' id='back'>
+                <FaChevronCircleLeft color='black' size={22} />
+                 Back To Products</Link>
                 <ul className="card-deck">
                     {
                         this.props.cart.map((product, index) =>
@@ -34,12 +37,26 @@ class Cart extends Component {
                                     </div>
                 
                                     <span>{product.count}</span>
-                                   <div>
-
-                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.cartItemQty(product.id)} value="">increase qty</button>
-                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.subQuantity(product.id)} value="">decrease qty</button>
+                                   <div className="buttons">
+                                    <button id="dec" className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.cartItemQty(product.id)} value="">
+                                    <FaArrowUp color='rgb(255, 215, 0' size={22} />
+                                    Inc QTY</button>
+                                    <button id="inc" className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.subQuantity(product.id)} value="">Dec QTY
+                                    <FaArrowDown color='rgb(255, 215, 0' size={22} />
+                                    </button>
                                     </div>
-                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.removeFromCart(product)}>Remove from Cart</button>
+                                    <div className="buttons">
+                                    <button id="remove" className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.removeFromCart(product)}>Remove
+                                    <FaTrashAlt color='rgb(255, 215, 0' size={22} />
+</button>
+                                    <Link to= {'/checkout'}>
+                                    <button id="checkout" className="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    Checkout
+                                    <FaCheckCircle color='rgb(255, 215, 0' size={22} />
+                                    </button>
+                                    </Link>
+
+                                    </div>
 
                                 </div>
                             </li>

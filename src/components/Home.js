@@ -6,16 +6,29 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import { FaShoppingCart, FaEnvelope, FaExclamationTriangle } from 'react-icons/fa'
 
 class Home extends Component {
     render() {
         return (
             <Route>
-                <nav className="navbar navbar-light bg-light justify-content-between">
+             
+       <div id="navlinks">
+                <nav id="nav" className="navbar">
                 <Link to='products'>Products</Link>
-                <Link to="contact">Contact</Link>
-                <Link to="cart">Cart</Link>
+                <Link to="contact">Contact
+                <FaEnvelope color='rgb(255, 215, 0' size={22} />
+                </Link> 
+                <Link to="cart">Cart
+                <FaShoppingCart color='rgb(255, 215, 0' size={22} />
+                <i class="fas fa-shopping-cart"></i>
+                 </Link>
+                <span>
+                </span>
+                
                 </nav>
+                </div>  
+              
             </Route>
         )
     }
