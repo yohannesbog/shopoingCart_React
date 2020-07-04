@@ -3,60 +3,73 @@ export default function() {
     return [{
         picture: "./Images/shoes1.jpg",
         brand: 'Adidas',
-        type: 'Shirt',
+        type: 'Shoes',
         price: 5,
         qut: 10,
         id: 1,
-        description: 'test'
+        description: 'test',
+        count: 1
 
     },
     {
-        picture: './Images/shirt1.jpg',
-        brand: 'Puma',
-        type: 'T-Shirt',
+        picture: './Images/kindle.jpg',
+        brand: 'Kindle',
+        type: 'Electronics',
         price: 43,
         qut: 10,
         id: 2,
-        description: 'test'
+        description: 'test',
+        count: 1
+
     },
+    
     {
-        picture: './Images/shirt1.jpg',
-        brand: 'Nike',
-        type: 'Shoes',
+        picture: './Images/javascriptbook.jpg',
+        brand: 'Book',
+        type: 'Book',
         price: 17,
         qut: 10,
         id: 3,       
-         description: 'test'
+         description: 'test',
+         count: 1
+
 
     },
     {
-        picture: './Images/shoes1.jpg',
-        brand: 'Dgtl',
-        type: 'shoes',
+        picture: './Images/book.jpeg',
+        brand: 'Design Book',
+        type: 'Book',
         price: 9,
         qut: 4,
         id: 4,
-        description: 'test'
+        description: 'test',
+        count: 1
+
 
     },
     {
-        picture: './Images/shoes1.jpg',
-        brand: 'Nike',
-        type: 'T-Shirt',
+        picture: './Images/charger.jpg',
+        brand: 'charger',
+        type: 'Electronics',
         price: 10,
         qut: 10,
         id: 5,
-        description: 'test'
+        description: 'test',
+        count: 1
+
 
     },
     {
         picture: './Images/shirt1.jpg',
         brand: 'Adidas',
-        type: 'shoes',
+        type: 'Cloth',
         price: 8,
         qut: 10,
         id: 6,
-        description: 'test'
+        description: 'test',
+        count: 1
+
+
 
     }
 ]

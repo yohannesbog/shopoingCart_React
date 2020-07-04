@@ -1,26 +1,31 @@
 import { connect } from 'react-redux'
 import './Products.css'
 import React, { Component } from 'react'
-import { selectedProduct } from '../reducers/selectedProduct'
 import {
     Link
 } from "react-router-dom";
 import {bindActionCreators} from 'redux'
 import {removeFromCart} from '../actions/removeFromCart';
+import {cartItemQty} from '../actions/cartItemQty';
+import {subQuantity} from  '../actions/SubQuantity'
+import './Cart.css'
+import { FaCheckCircle, FaArrowDown, FaTrashAlt, FaArrowUp, FaChevronCircleLeft } from 'react-icons/fa'
+
 
 
 class Cart extends Component {
-    render() {
+ render() {
         return (
             <div>
-                <h1>Your selected Items</h1>
-                <Link to='Products'>Back To Products</Link>
-
+                <h1 id='header'>Your selected Items</h1>
+                <Link to='products' id='back'>
+                <FaChevronCircleLeft color='black' size={22} />
+                 Back To Products</Link>
                 <ul className="card-deck">
                     {
-                        this.props.cart.map(product =>
+                        this.props.cart.map((product, index) =>
 
-                            <li key={product.id}>
+                            <li key={index}>
                                 <div className='card'>
                                     <img className="card-img-top" id='image' src={product.picture} />
 
@@ -30,23 +35,28 @@ class Cart extends Component {
                                         <p className="card-text">Description:{product.description}</p>
 
                                     </div>
-                                    <div>
-                                        <select id="dropdown">
-                                            <option value="">Select Quantity</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                            <option value="4">Four</option>
-                                            <option value="5">Five</option>
-                                            <option value="6">Six</option>
-                                            <option value="7">Seven</option>
-                                            <option value="8">Eight</option>
-                                            <option value="9">Nine</option>
-                                            <option value="10">Ten</option>
-                                        </select>
+                
+                                    <span>{product.count}</span>
+                                   <div className="buttons">
+                                    <button id="dec" className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.cartItemQty(product.id)} value="">
+                                    <FaArrowUp color='rgb(255, 215, 0' size={22} />
+                                    Inc QTY</button>
+                                    <button id="inc" className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.subQuantity(product.id)} value="">Dec QTY
+                                    <FaArrowDown color='rgb(255, 215, 0' size={22} />
+                                    </button>
                                     </div>
-                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Buy Now</button>
-                                    {/* <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.removeFromCart(product)}>Remove From Cart</button> */}
+                                    <div className="buttons">
+                                    <button id="remove" className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={ () =>this.props.removeFromCart(product)}>Remove
+                                    <FaTrashAlt color='rgb(255, 215, 0' size={22} />
+</button>
+                                    <Link to= {'/checkout'}>
+                                    <button id="checkout" className="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    Checkout
+                                    <FaCheckCircle color='rgb(255, 215, 0' size={22} />
+                                    </button>
+                                    </Link>
+
+                                    </div>
 
                                 </div>
                             </li>
@@ -62,13 +72,18 @@ class Cart extends Component {
 
 function mapStateToProps(state) {
     return {
-        ...state,
         cart: state.selectedProduct.cart
-    }
+    };
+
 }
-// function matchDispatchToProps(dispatch) {
-//    return bindActionCreators({removeFromCart: removeFromCart}, dispatch)
+
+// const matchDispatchToProps = {
+//     removeFromCart,
+//      cartItemQty
 // }
+function matchDispatchToProps(dispatch) {
+   return bindActionCreators({removeFromCart, cartItemQty, subQuantity},dispatch)
+}
 
 
-export default connect( mapStateToProps)(Cart)
+export default connect( mapStateToProps,matchDispatchToProps)(Cart)
