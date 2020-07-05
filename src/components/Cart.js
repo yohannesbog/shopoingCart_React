@@ -33,7 +33,6 @@ class Cart extends Component {
                                     <div className='card-bod'>
                                         <p className="card-text">{product.type}</p>
                                         <p className="card-text">${product.price}</p>
-                                        <p className="card-text">Description:{product.description}</p>
 
                                     </div>
 

@@ -18,10 +18,10 @@ export class NavBar extends Component {
                         <nav id="nav" className="navbar">
                             <Link to='products'>Products</Link>
                             <Link to="contact">Contact
-                <FaEnvelope color='rgb(255, 215, 0' size={22} />
+                <FaEnvelope id='contacticon' color='rgb(255, 215, 0' size={34} />
                             </Link>
                             <Link to="cart">Cart
-                <FaShoppingCart color='rgb(255, 215, 0' size={22} />
+                <FaShoppingCart id='carticon' color='rgb(255, 215, 0' size={37} />
                                 <i class="fas fa-shopping-cart"></i>
                             </Link>
                             <span>

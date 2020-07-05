@@ -17,9 +17,17 @@
     color: #111;
     display: block;
   }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
+  #contacticon{
+    display: inline-block;
+    padding-left: 15px;
+  }
+  #carticon {
+    display: inline-block;
+    padding-left: 15px;
+  }
+  #nav a:hover {
+    color: #007bff;
+    /* background-color: #007bff; */
   }
 
   #nav {
@@ -37,3 +45,9 @@
   /* #navlinks {
     background-color: gray;
   } */
+
+  #nav a{
+    color: aliceblue;
+    font-size: 20px;
+
+  }
