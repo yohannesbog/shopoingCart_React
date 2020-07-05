@@ -76,7 +76,7 @@ export class Contact extends Component {
                     </form>
         
                     <div className="text-center text-md-left">
-                        <a className="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                        <a className="btn btn-primary" onClick="document.getElementById('contact-form').submit();">Send</a>
                     </div>
                     <div className="status"></div>
                 </div>

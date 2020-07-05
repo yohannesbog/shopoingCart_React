@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
 import Contact from './components/Contact';
-// import ProductDetail from './components/ProductDetail';
+//  import ProductDetail from './components/ProductDetail';
 
 
 import Products from './components/Products';
@@ -17,7 +17,6 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 
 
-// const store = createStore(allReducers);
 
 
 
