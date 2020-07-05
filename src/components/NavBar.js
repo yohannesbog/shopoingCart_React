@@ -6,7 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import { FaShoppingCart, FaEnvelope, FaHandshake } from 'react-icons/fa'
+import { FaShoppingCart, FaEnvelope, FaCogs, FaHome } from 'react-icons/fa'
 import Footer from './Footer';
 
 export class NavBar extends Component {
@@ -16,23 +16,27 @@ export class NavBar extends Component {
                 <div>
                     <div id="navlinks">
                         <nav id="nav" className="navbar">
-                            <Link to='products'>Products</Link>
+                        <Link to='/'>Home
+                        <FaHome id='contacticon' color='rgb(225, 203, 78' size={37} />
+                        </Link>
+
+                            <Link to='products'>Products
+                            <FaCogs id='contacticon' color='rgb(225, 203, 78' size={37} />
+                            </Link>
+                            
+
                             <Link to="contact">Contact
-                <FaEnvelope id='contacticon' color='rgb(255, 215, 0' size={34} />
+                <FaEnvelope id='contacticon' color='rgb(225, 203, 78' size={34} />
                             </Link>
                             <Link to="cart">Cart
-                <FaShoppingCart id='carticon' color='rgb(255, 215, 0' size={37} />
-                                <i class="fas fa-shopping-cart"></i>
+                <FaShoppingCart id='carticon' color='rgb(225, 203, 78' size={37} />
+                                <i className="fas fa-shopping-cart"></i>
                             </Link>
                             <span>
                             </span>
                         </nav>
                     </div>
 
-                    {/* <h3 id='welcome'>Welcome To Digital ShoppingCart
-                <br></br>
-                        <FaHandshake color='rgb(255, 215, 0' size={200} />
-                    </h3> */}
                 </div>
             </Route>
         )

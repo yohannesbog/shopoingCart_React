@@ -24,9 +24,15 @@ body{
 }
 
 #footer {
-    margin-bottom: 1px;
+    margin-bottom: 0px;
     padding-bottom: 1%;
-    padding-top: 12%;
-
     height: 10PX;
 }
+
+#welcome{
+    padding-top: 10%;
+    padding-left: 40%;
+    color: #f1f1f1;
+    height: 75vh;
+
+  }  
