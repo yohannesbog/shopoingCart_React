@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
 import Contact from './components/Contact';
+// import ProductDetail from './components/ProductDetail';
+
 
 import Products from './components/Products';
 import {
@@ -30,7 +32,7 @@ function App() {
     <Route path='/products' exact component={Products}/>
     <Route path='/cart' exact component={Cart}/>
     <Route path='/checkout' exact component={Checkout}/>
-
+    {/* <Route path='/productdetail' exact component={ProductDetail}/> */}
     </div>
     </Router>
   );
