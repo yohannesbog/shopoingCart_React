@@ -31,15 +31,17 @@
   }
 
   #nav {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
     padding: 20px;
     background-color: rgb(40, 35, 35) ;
 
   }
 #welcome{
   padding-top: 10%;
-  padding-left: 40%;
+  padding-left: 25%;
+  padding-right: 25%;
+
   color: #f1f1f1;
 }              
   /* #navlinks {
@@ -50,4 +52,7 @@
     color: aliceblue;
     font-size: 20px;
 
+  }
+  #homecart {
+    margin-left: 10%;
   }

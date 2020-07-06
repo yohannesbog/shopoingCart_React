@@ -14,7 +14,7 @@ class Home extends Component {
         
                  Digital ShoppingCart
                 <br></br>
-                        <FaCartArrowDown color='rgb(225, 203, 78' size={200} />
+                        <FaCartArrowDown id="homecart" color='rgb(225, 203, 78' size={200} />
                     </h3> 
                     <Footer />
                 </div>
