@@ -12,6 +12,7 @@ color: seagreen;}
   background-color: black;
   color: black;
   /* flex-shrink: initial; */
+   width: 100vw;
 }
 small{
     flex-shrink: none;
@@ -29,7 +30,7 @@ body{
     padding-bottom: 0;
     height: 10PX;
     position:fixed;
-    width: 100;
+   width: 100;
 }
 
 #welcome{
