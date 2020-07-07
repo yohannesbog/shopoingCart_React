@@ -28,7 +28,7 @@ class Cart extends Component {
 
                             <li key={index}>
                                 <div className='card'>
-                                    <img className="card-img-top" id='image' src={product.picture} />
+                                    <Link to={`product/${product.id}`}><img className="card-img-top" id='image' src={product.picture} /></Link>
 
                                     <div className='card-bod'>
                                         <p className="card-text">{product.type}</p>

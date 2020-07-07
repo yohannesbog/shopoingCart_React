@@ -41,9 +41,9 @@ class Products extends Component {
                         this.props.products.map(product =>
                             <li key={product.id}>
                                 <div className='card'>
-                                    <Link to= {'/checkout'}><img className="card-img-top" id='image' src={product.picture}/></Link>
+                                    <Link to= {`product/${product.id}`}><img className="card-img-top" id='image' src={product.picture}/></Link>
                                     <div className='card-bod'>
-                                   <Link to= {'/checkout'}><h5 className="card-title" >{product.brand} </h5> </Link> 
+                                   <Link to={`product/${product.id}`}><h5 className="card-title" >{product.brand} </h5> </Link> 
                                     <p className="card-text">{product.type}</p>
                                     <p className="card-text">${product.price}</p>
                                     </div>

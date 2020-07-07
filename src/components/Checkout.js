@@ -3,7 +3,7 @@ import './pagecolor.css'
 import {
   Link
 } from "react-router-dom";
-import { FaChevronCircleLeft } from 'react-icons/fa'
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 
 
 
@@ -28,7 +28,7 @@ export class Checkout extends Component {
         data: 
         <div>
         <Link to='/cart' id='back'> 
-        <FaChevronCircleLeft color='black' size={22} />
+        <FaArrowAltCircleLeft color='black' size={22} />
         Back To Cart</Link>
         <div className="row">
         <div className="col-75">
