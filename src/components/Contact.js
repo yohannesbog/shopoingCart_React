@@ -4,7 +4,7 @@ import {
 
     Link
 } from "react-router-dom";
-import { FaChevronCircleLeft } from 'react-icons/fa'
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 
 export class Contact extends Component {
     constructor(props){
@@ -26,8 +26,8 @@ export class Contact extends Component {
           this.setState({
             data: 
             <section className="mb-4" id="contact">
-<Link to='products' id='back'>
-                <FaChevronCircleLeft color='black' size={22} />
+               <Link to='products' id='back'>
+                <FaArrowAltCircleLeft color='black' size={30} />
                  Back To Products</Link>
             <h2 className="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
             <p className="text-center w-responsive mx-auto mb-5">Please send us your feedback</p>

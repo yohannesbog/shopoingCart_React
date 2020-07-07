@@ -1,31 +1,19 @@
 
 export default function() {
     return [{
-        picture: "./Images/shoes1.jpg",
-        brand: 'Adidas',
-        type: 'Shoes',
-        price: 50,
-        qut: 10,
-        id: 1,
-        description: 'Inspired by adidas heritage running designs, the Swift offers a sleek look and comfortable cushioning. These soft knit shoes stand out with a seasonal pattern inspired by jazz music. They are detailed with smooth welded 3-Stripes and cushioned with a lightweight EVA midsole.',
-        count: 1, 
-
-
-    },
-    {
-        picture: './Images/kindle.jpg',
-        brand: 'Kindle',
-        type: 'Electronics',
-        price: 43,
-        qut: 10,
-        id: 2,
-        description: 'Read books and browse the web with this Amazon Fire 7 tablet. The 7-inch IPS display delivers clear text and sharp visuals, and the powerful battery offers up to 7 hours of use per charge. A 1.3GHz processor and 1GB of RAM ensure smooth performance and let this Amazon Fire 7 tablet handle heavy-duty tasks.',
-        count: 1,
+        picture: "/./Images/book.jpeg",
+        brand: 'Design Book',
+        type: 'Book',
+        price: 9,
+        qut: 4,
+        id: 4,
+        description: 'As a developer, you need to build software in a secure way. But you can\'t spend all your time focusing on security. The answer is to use good design principles, tools, and mindsets that make security an implicit result - it\'s secure by design.',
+        count: 1
 
     },
     
     {
-        picture: './Images/javascriptbook.jpg',
+        picture: '/./Images/javascriptbook.jpg',
         brand: 'Book',
         type: 'Book',
         price: 17,
@@ -37,20 +25,20 @@ export default function() {
 
     },
     {
-        picture: './Images/book.jpeg',
-        brand: 'Design Book',
-        type: 'Book',
-        price: 9,
-        qut: 4,
-        id: 4,
-        description: 'As a developer, you need to build software in a secure way. But you can\'t spend all your time focusing on security. The answer is to use good design principles, tools, and mindsets that make security an implicit result - it\'s secure by design.',
-        count: 1
+        picture: '/./Images/kindle.jpg',
+        brand: 'Kindle',
+        type: 'Electronics',
+        price: 43,
+        qut: 10,
+        id: 2,
+        description: 'Read books and browse the web with this Amazon Fire 7 tablet. The 7-inch IPS display delivers clear text and sharp visuals, and the powerful battery offers up to 7 hours of use per charge. A 1.3GHz processor and 1GB of RAM ensure smooth performance and let this Amazon Fire 7 tablet handle heavy-duty tasks.',
+        count: 1,
 
 
     },
     {
-        picture: './Images/charger.jpg',
-        brand: 'charger',
+        picture: '/./Images/charger.jpg',
+        brand: 'Charger',
         type: 'Electronics',
         price: 10,
         qut: 10,
@@ -61,7 +49,19 @@ export default function() {
 
     },
     {
-        picture: './Images/shirt1.jpg',
+        picture: '/./Images/shoes1.jpg',
+        brand: 'Adidas',
+        type: 'Shoes',
+        price: 50,
+        qut: 10,
+        id: 1,
+        description: 'Inspired by adidas heritage running designs, the Swift offers a sleek look and comfortable cushioning. These soft knit shoes stand out with a seasonal pattern inspired by jazz music. They are detailed with smooth welded 3-Stripes and cushioned with a lightweight EVA midsole.',
+        count: 1, 
+
+
+    },
+    {
+        picture: '/./Images/shirt1.jpg',
         brand: 'Adidas',
         type: 'Cloth',
         price: 8,
@@ -69,9 +69,6 @@ export default function() {
         id: 6,
         description: '100% cotton, tri-blend & polyester options',
         count: 1
-
-
-
     }
 ]
 
