@@ -8,9 +8,10 @@ body {
 color: seagreen;}
 
 #sticky-footer {
-  flex-shrink: none;
+   flex-shrink: none;
   background-color: black;
   color: black;
+  /* flex-shrink: initial; */
 }
 small{
     flex-shrink: none;
@@ -25,8 +26,10 @@ body{
 
 #footer {
     margin-bottom: 0px;
-    padding-bottom: 1%;
+    padding-bottom: 0;
     height: 10PX;
+    position:fixed;
+    width: 100;
 }
 
 #welcome{
