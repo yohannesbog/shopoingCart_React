@@ -22,7 +22,8 @@ small{
 
 body{
   background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
+  background: linear-gradient(to right, rgb(128, 130, 133), rgb(144, 163, 177));
+  /* background: linear-gradient(to right, #0062E6, #33AEFF); */
 }
 
 #footer {
